@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+font-family: "Parkinsans", sans-serif;
+}
+
+.birthdayimg {
+  background-image: url('https://cdn.pixabay.com/photo/2018/02/23/21/29/roses-frame-3176667_960_720.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: indigo;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  color: Purple;
+  top: 0;
+  left: 12px;
+}
+
+.bottomleft {
+  position: absolute;
+  color:indigo;
+  bottom:0;
+  left: 18px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+.birthday-img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+   border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+<div class="birthdayimg">
+
+  <div>
+    <img class="birthday-img" src="WhatsApp Image 2024-12-09 at 7.02.03 PM.jpeg" alt="">
+  </div>
+  <div class="topleft">
+    <p>AWSOME log</p>
+  </div>
+  <div class="middle">
+    <h1>Hope your birthday is as special as you are</h1>
+    <hr>
+    <p id="amx" style="font-size:80px"></p>
+  </div>
+  <div class="bottomleft">
+    <p>14 DECEMBER 2024</p>
+  </div>
+</div>
+
+<script>
+var countDownDate = new Date("Jan 9, 2022 00:00:00").getTime();
+
+var countdownfunction = setInterval(function() {
+
+  var now = new Date().getTime();
+var distance = countDownDate - now;
+
+ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("amx").innerHTML = days + "D " + hours + "H "
+  + minutes + "M " + seconds + "S ";
+
+ if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("amx").innerHTML = "Happy 19th Birthday YASHASVI";
+   }
+
+}, 1000);
+</script>
+
+</body>
+</html>
